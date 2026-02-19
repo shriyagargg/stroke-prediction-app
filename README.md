@@ -1,33 +1,47 @@
-# 🧠 Stroke Risk Prediction Web App
+# Stroke Risk Prediction using Machine Learning and Streamlit
 
-A **machine learning–powered healthcare web application** that predicts the probability of stroke based on patient clinical information.
-Built using **Python, Scikit-learn, and Streamlit**, with an interactive and user-friendly interface for real-time risk estimation.
+## Overview
 
----
+This project is a **Stroke Risk Prediction web application** built using **machine learning classification techniques** and deployed with **Streamlit**.
 
-## 🚀 Live Demo
+The application allows users to enter patient health information and instantly receive a **predicted probability of stroke risk** along with a clear risk indication.
 
-🔗 *Add your deployed Streamlit link here*
-Example: https://your-username-stroke-risk-prediction.streamlit.app
+The project demonstrates the **complete workflow of a real-world ML system**, including data preprocessing, feature engineering, model training, prediction, visualization, and deployment.
 
 ---
 
-## 📌 Problem Statement
+## Features
 
-Stroke is one of the leading causes of **death and long-term disability** worldwide.
-Early identification of high-risk individuals enables:
-
-* Preventive healthcare
-* Lifestyle intervention
-* Timely medical support
-
-This project applies **supervised machine learning** to estimate stroke risk from patient health attributes.
+* Interactive patient health input form
+* Real-time stroke risk probability prediction
+* Clean and user-friendly medical-style interface
+* Handles missing values and categorical encoding
+* Uses trained machine learning model for inference
+* Deployed as an interactive **Streamlit web application**
 
 ---
 
-## 🧾 Dataset Information
+## Tech Stack
 
-The model uses a healthcare dataset containing:
+* **Programming Language:** Python
+
+* **Libraries & Frameworks:**
+
+  * Streamlit
+  * Pandas
+  * NumPy
+  * Scikit-learn
+  * Joblib
+  * Matplotlib
+  * Seaborn
+
+* **Deployment:** Streamlit Community Cloud
+
+---
+
+## Dataset Information
+
+The model uses a healthcare dataset containing patient attributes such as:
 
 * Age
 * Hypertension
@@ -39,79 +53,47 @@ The model uses a healthcare dataset containing:
 * Residence type
 * Marital status
 
-**Target variable:**
-`stroke → 0 (No), 1 (Yes)`
+**Target Variable:**
+
+* `stroke → 0 (No Stroke), 1 (Stroke)`
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Machine Learning Model
 
-### 1. Data Preprocessing
-
-* Removed irrelevant **ID column**
-* Handled missing **BMI values** using median imputation
-* Applied **one-hot encoding** to categorical variables
-* Scaled numerical features using **StandardScaler**
-
-### 2. Handling Class Imbalance
-
-* Used **class-weighted Random Forest**
-* Improved detection of minority stroke cases
-
-### 3. Model Training & Evaluation
-
-* Stratified **train-test split**
-* Evaluated using:
-
-  * Accuracy
-  * Precision & Recall
-  * **ROC-AUC score**
-* Generated:
-
-  * ROC Curve
-  * Confusion Matrix
-  * Feature Importance
-
-### 4. Deployment
-
-* Saved:
-
-  * Trained model
-  * Scaler
-  * Feature column order
-* Integrated into a **Streamlit web application** for real-time prediction.
+* **Model Used:** Random Forest Classifier
+* Handles **non-linear relationships** in medical data
+* Uses **class weighting** to address dataset imbalance
+* Trained on preprocessed and scaled clinical features
+* Outputs **stroke probability** for real-time prediction
 
 ---
 
-## 🖥️ Streamlit App Features
+## Data Pipeline
 
-* Interactive medical input form
-* Real-time **stroke probability prediction**
-* Custom healthcare **risk threshold**
-* ROC curve & confusion matrix visualization
-* Clean, responsive healthcare-style UI
-* Consistent preprocessing between training and inference
-
----
-
-## 🛠 Tech Stack
-
-**Languages & Libraries**
-
-* Python
-* Pandas, NumPy
-* Scikit-learn
-* Streamlit
-* Joblib
-* Matplotlib & Seaborn
+1. Load healthcare dataset
+2. Remove irrelevant ID column
+3. Handle missing BMI values using median imputation
+4. Encode categorical variables using one-hot encoding
+5. Scale numerical features using StandardScaler
+6. Train Random Forest classification model
+7. Save model, scaler, and feature columns
+8. Load trained model in Streamlit for prediction
 
 ---
 
-## 📂 Project Structure
+## Visualizations
+
+* Stroke risk probability indicator
+* Prediction result display (High Risk / Low Risk)
+* Clean medical-style UI for better interpretation
+
+---
+
+## Project Structure
 
 ```
 stroke-risk-prediction/
-│
 ├── app.py
 ├── train_model.py
 ├── requirements.txt
@@ -132,56 +114,31 @@ stroke-risk-prediction/
 
 ---
 
-## ▶️ Run Locally
+## Future Enhancements
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/stroke-risk-prediction.git
-
-# Navigate to project folder
-cd stroke-risk-prediction
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run Streamlit app
-streamlit run app.py
-```
+* Add ROC curve and confusion matrix visualization
+* Compare multiple ML models (Logistic Regression, XGBoost)
+* Apply SMOTE for improved imbalance handling
+* Generate downloadable medical risk report (PDF)
+* Add authentication and patient history tracking
 
 ---
 
-## 📈 Results
+## Disclaimer
 
-* Achieved strong **ROC-AUC performance** for stroke prediction
-* Improved minority-class detection using **class weighting**
-* Delivered an **end-to-end ML deployment pipeline** from data → model → web app
-
----
-
-## 🔮 Future Improvements
-
-* SMOTE-based imbalance handling
-* Model comparison (Logistic Regression, XGBoost)
-* Downloadable **PDF medical risk report**
-* User authentication & patient history tracking
-* Cloud deployment with monitoring
+This project is created for **educational and learning purposes only**.
+It **must not be used for real medical diagnosis or treatment decisions**.
 
 ---
 
-## ⚠️ Disclaimer
-
-This project is created for **educational and research purposes only**
-and **must not be used for real medical diagnosis or treatment decisions**.
-
----
-
-## 👩‍💻 Author
+## Author
 
 **Shriya Garg**
 B.Tech Computer Science Engineering Student
 
 ---
 
-## ⭐ If you found this project useful
+## Contact
 
-Consider giving it a **star ⭐ on GitHub**.
+**Email:** *Shriyagarg170@gmail.com*
+**LinkedIn:** *https://www.linkedin.com/in/shriyagargg/*
