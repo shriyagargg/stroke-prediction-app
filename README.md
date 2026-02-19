@@ -10,6 +10,11 @@ The project demonstrates the **complete workflow of a real-world ML system**, in
 
 ---
 
+## 🚀 Live Demo
+
+🔗 [Click Here to Try the App](https://stroke-prediction-app-shriyagarg.streamlit.app/)
+
+
 ## Features
 
 * Interactive patient health input form
